@@ -5,7 +5,9 @@ Used to bypass restricted networks that allow only social networks (cruise ships
 
 
 ### Status
-> Currently in development
+- Socks server ✅
+- TCP Forwarder ✅
+- Telegram comunication ❌
 
 
 ### Concept

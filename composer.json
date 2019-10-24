@@ -1,5 +1,6 @@
 {
     "require": {
-        "amphp/socket": "^1.0"
+        "amphp/socket": "^1.0",
+        "clue/socks-react": "^1.0"
     }
 }
