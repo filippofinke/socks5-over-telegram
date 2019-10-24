@@ -20,9 +20,9 @@ if(count($argv) != 3) {
 $host = $argv[1];
 $forward_to = $argv[2];
 
-Loop::run(static function () use ($host, $forward_to) {
+Loop::run(function () use ($host, $forward_to) {
 
-    $forwarder = asyncCoroutine(static function ($from, $to) {
+    $forwarder = asyncCoroutine(function ($from, $to) {
         [$from_ip, $from_port] = \explode(':', $from->getRemoteAddress());
         [$to_ip, $to_port] = \explode(':', $to->getRemoteAddress());
         while (($read = yield $from->read()) !== null) {
