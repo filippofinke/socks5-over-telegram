@@ -1,2 +1,8 @@
 /vendor/
 composer.lock
+/src/local_to_telegram.madeline
+/src/local_to_telegram.madeline.lock
+/src/telegram_to_socks.madeline
+/src/telegram_to_socks.madeline.lock
+/src/storage
+!/src/storage/.gitkeep
