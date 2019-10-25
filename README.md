@@ -3,6 +3,9 @@
 ### Description:
 Used to bypass restricted networks that allow only social networks (cruise ships network, ...). 
 
+### Concept:
+![Concept](concept.png)
+
 ### How to:
 
 1) Start socks server on a server with free internet.
@@ -48,6 +51,3 @@ If you run forward scripts for the first time you will be asked to log in, you h
 - TCP Forwarder ✅
 - Telegram comunication ✅
 - Project working with minor bugs ✅
-
-### Concept:
-![Concept](concept.png)
