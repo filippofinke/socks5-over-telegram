@@ -47,6 +47,7 @@ If you run forward scripts for the first time you will be asked to log in, you h
 - Socks server ✅
 - TCP Forwarder ✅
 - Telegram comunication ✅
+- Project working with minor bugs ✅
 
 ### Concept:
 ![Concept](concept.png)
