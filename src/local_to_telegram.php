@@ -43,7 +43,6 @@ $MadelineProto->setCallback(function ($update) use (&$sockets, $MadelineProto) {
         }
     }
 });
-$MadelineProto->start();
 $MadelineProto->loop(function () use ($host, &$sockets, $MadelineProto, $channel) {
     $forwarder = function ($from, $id) use ($sockets, $MadelineProto, $channel) {
         [$from_ip, $from_port] = \explode(':', $from->getRemoteAddress());
@@ -78,7 +77,7 @@ $MadelineProto->loop(function () use ($host, &$sockets, $MadelineProto, $channel
             \Amp\asyncCall($forwarder, $socket, count($sockets) - 1);
         }
     };
-
+    yield $MadelineProto->start();
     $me = yield $MadelineProto->get_self();
     printf("🤖 Logged as @%s [%d]".PHP_EOL, $me["username"], $me["id"]);
     \Amp\asyncCall($createServer);

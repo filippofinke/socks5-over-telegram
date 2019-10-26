@@ -72,8 +72,8 @@ $MadelineProto->setCallback(function ($update) use ($socks, &$sockets, $Madeline
         }
     }
 });
-$MadelineProto->start();
 $MadelineProto->loop(function () use ($MadelineProto, $socks) {
+    yield $MadelineProto->start();
     $me = yield $MadelineProto->get_self();
     printf("🤖 Logged as @%s [%d]".PHP_EOL, $me["username"], $me["id"]);
     printf("⌛ Waiting for request to forward to %s".PHP_EOL, $socks);
